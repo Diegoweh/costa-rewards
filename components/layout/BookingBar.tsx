@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react";
 import { X } from "lucide-react";
 
-const WHATSAPP_PHONE = "5216691527305"; // 👈 cámbialo
+const WHATSAPP_PHONE = "5216693300014"; // 👈 cámbialo
 
 
 type Props = {
