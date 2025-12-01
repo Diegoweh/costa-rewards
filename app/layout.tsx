@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 
@@ -11,6 +12,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const royaleScript = localFont({
+  src: "../public/fonts/RoyaleCouture-Script_2.otf",
+  variable: "--font-royale-script",
+  display: "swap",
+});
+
+const royaleSerif = localFont({
+  src: "../public/fonts/RoyaleCouture-Serif_2.otf",
+  variable: "--font-royale-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${royaleScript.variable} ${royaleSerif.variable} antialiased`}
       >
         <Navbar />
         {children}
