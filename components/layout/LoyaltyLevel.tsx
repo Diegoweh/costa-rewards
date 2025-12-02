@@ -2,108 +2,107 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, Check, Minus } from "lucide-react"
-
-const levels = [
-  {
-    name: "ORO",
-    description:
-      "Registrarse en el programa (sin costo). Tu puerta de entrada al mundo de beneficios exclusivos.",
-    benefits: {
-      welcomeDiscount: true,
-      priorityCheckInOut: true,
-      exclusiveOffers: true,
-      freeWifi: true,
-      pointsAccumulation: true,
-      roomUpgrade: false,
-      additionalDiscount: false,
-      welcomeDrink: false,
-      earlyAccessPromos: false,
-      increasedPoints: false,
-      lateCheckout: false,
-      guaranteedUpgrade: false,
-      significantDiscount: false,
-      freeBreakfast: false,
-      maximumPoints: false,
-      guaranteedCheckInOut: false,
-      personalizedAttention: false,
-      specialWelcomeGift: false,
-    },
-  },
-  {
-    name: "PLATINO",
-    description:
-      "Haber completado [número] estancias o acumulado [cantidad] puntos en un periodo de [tiempo].",
-    benefits: {
-      welcomeDiscount: true,
-      priorityCheckInOut: true,
-      exclusiveOffers: true,
-      freeWifi: true,
-      pointsAccumulation: true,
-      roomUpgrade: true,
-      additionalDiscount: true,
-      welcomeDrink: true,
-      earlyAccessPromos: true,
-      increasedPoints: true,
-      lateCheckout: true,
-      guaranteedUpgrade: false,
-      significantDiscount: false,
-      freeBreakfast: false,
-      maximumPoints: false,
-      guaranteedCheckInOut: false,
-      personalizedAttention: false,
-      specialWelcomeGift: false,
-    },
-  },
-  {
-    name: "DIAMANTE",
-    description:
-      "Haber completado [número] estancias o acumulado [cantidad] puntos en un periodo de [tiempo]. El nivel más exclusivo.",
-    benefits: {
-      welcomeDiscount: true,
-      priorityCheckInOut: true,
-      exclusiveOffers: true,
-      freeWifi: true,
-      pointsAccumulation: true,
-      roomUpgrade: true,
-      additionalDiscount: true,
-      welcomeDrink: true,
-      earlyAccessPromos: true,
-      increasedPoints: true,
-      lateCheckout: true,
-      guaranteedUpgrade: true,
-      significantDiscount: true,
-      freeBreakfast: true,
-      maximumPoints: true,
-      guaranteedCheckInOut: true,
-      personalizedAttention: true,
-      specialWelcomeGift: true,
-    },
-  },
-]
-
-const benefitLabels = [
-  { key: "welcomeDiscount", label: "Descuento de bienvenida en próxima reserva directa" },
-  { key: "priorityCheckInOut", label: "Check in y check out prioritario" },
-  { key: "exclusiveOffers", label: "Acceso a ofertas exclusivas" },
-  { key: "freeWifi", label: "Wi-Fi gratuito" },
-  { key: "pointsAccumulation", label: "Acumulación de puntos por noche" },
-  { key: "roomUpgrade", label: "Mejora de habitación (Upgrade sujeto a disponibilidad)" },
-  { key: "additionalDiscount", label: "Descuento adicional en reservas directas" },
-  { key: "welcomeDrink", label: "Bebida de bienvenida gratuita" },
-  { key: "earlyAccessPromos", label: "Acceso anticipado a promociones" },
-  { key: "increasedPoints", label: "Aumento en cantidad de puntos" },
-  { key: "lateCheckout", label: "Late check out (sujeto a disponibilidad)" },
-  { key: "guaranteedUpgrade", label: "Mejora de habitación garantizada (sin costo)" },
-  { key: "significantDiscount", label: "Descuento significativo (mayor porcentaje)" },
-  { key: "freeBreakfast", label: "Desayuno buffet gratuito para el titular" },
-  { key: "maximumPoints", label: "Máximo beneficio de puntos por noche" },
-  { key: "guaranteedCheckInOut", label: "Early check in y late check out garantizados" },
-  { key: "personalizedAttention", label: "Atención personalizada" },
-  { key: "specialWelcomeGift", label: "Obsequio de bienvenida especial" },
-]
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export function LoyaltyLevels() {
+  const { t } = useLanguage();
   const [currentLevel, setCurrentLevel] = useState(0)
+
+  const levels = [
+    {
+      name: t.loyaltyLevels.levels.gold.name,
+      description: t.loyaltyLevels.levels.gold.description,
+      benefits: {
+        welcomeDiscount: true,
+        priorityCheckInOut: true,
+        exclusiveOffers: true,
+        freeWifi: true,
+        pointsAccumulation: true,
+        roomUpgrade: false,
+        additionalDiscount: false,
+        welcomeDrink: false,
+        earlyAccessPromos: false,
+        increasedPoints: false,
+        lateCheckout: false,
+        guaranteedUpgrade: false,
+        significantDiscount: false,
+        freeBreakfast: false,
+        maximumPoints: false,
+        guaranteedCheckInOut: false,
+        personalizedAttention: false,
+        specialWelcomeGift: false,
+      },
+    },
+    {
+      name: t.loyaltyLevels.levels.platinum.name,
+      description: t.loyaltyLevels.levels.platinum.description,
+      benefits: {
+        welcomeDiscount: true,
+        priorityCheckInOut: true,
+        exclusiveOffers: true,
+        freeWifi: true,
+        pointsAccumulation: true,
+        roomUpgrade: true,
+        additionalDiscount: true,
+        welcomeDrink: true,
+        earlyAccessPromos: true,
+        increasedPoints: true,
+        lateCheckout: true,
+        guaranteedUpgrade: false,
+        significantDiscount: false,
+        freeBreakfast: false,
+        maximumPoints: false,
+        guaranteedCheckInOut: false,
+        personalizedAttention: false,
+        specialWelcomeGift: false,
+      },
+    },
+    {
+      name: t.loyaltyLevels.levels.diamond.name,
+      description: t.loyaltyLevels.levels.diamond.description,
+      benefits: {
+        welcomeDiscount: true,
+        priorityCheckInOut: true,
+        exclusiveOffers: true,
+        freeWifi: true,
+        pointsAccumulation: true,
+        roomUpgrade: true,
+        additionalDiscount: true,
+        welcomeDrink: true,
+        earlyAccessPromos: true,
+        increasedPoints: true,
+        lateCheckout: true,
+        guaranteedUpgrade: true,
+        significantDiscount: true,
+        freeBreakfast: true,
+        maximumPoints: true,
+        guaranteedCheckInOut: true,
+        personalizedAttention: true,
+        specialWelcomeGift: true,
+      },
+    },
+  ]
+
+  const benefitLabels = [
+    { key: "welcomeDiscount", label: t.loyaltyLevels.benefits.welcomeDiscount },
+    { key: "priorityCheckInOut", label: t.loyaltyLevels.benefits.priorityCheckInOut },
+    { key: "exclusiveOffers", label: t.loyaltyLevels.benefits.exclusiveOffers },
+    { key: "freeWifi", label: t.loyaltyLevels.benefits.freeWifi },
+    { key: "pointsAccumulation", label: t.loyaltyLevels.benefits.pointsAccumulation },
+    { key: "roomUpgrade", label: t.loyaltyLevels.benefits.roomUpgrade },
+    { key: "additionalDiscount", label: t.loyaltyLevels.benefits.additionalDiscount },
+    { key: "welcomeDrink", label: t.loyaltyLevels.benefits.welcomeDrink },
+    { key: "earlyAccessPromos", label: t.loyaltyLevels.benefits.earlyAccessPromos },
+    { key: "increasedPoints", label: t.loyaltyLevels.benefits.increasedPoints },
+    { key: "lateCheckout", label: t.loyaltyLevels.benefits.lateCheckout },
+    { key: "guaranteedUpgrade", label: t.loyaltyLevels.benefits.guaranteedUpgrade },
+    { key: "significantDiscount", label: t.loyaltyLevels.benefits.significantDiscount },
+    { key: "freeBreakfast", label: t.loyaltyLevels.benefits.freeBreakfast },
+    { key: "maximumPoints", label: t.loyaltyLevels.benefits.maximumPoints },
+    { key: "guaranteedCheckInOut", label: t.loyaltyLevels.benefits.guaranteedCheckInOut },
+    { key: "personalizedAttention", label: t.loyaltyLevels.benefits.personalizedAttention },
+    { key: "specialWelcomeGift", label: t.loyaltyLevels.benefits.specialWelcomeGift },
+  ]
 
   const nextLevel = () => setCurrentLevel((prev) => (prev + 1) % levels.length)
   const prevLevel = () => setCurrentLevel((prev) => (prev - 1 + levels.length) % levels.length)
@@ -111,16 +110,18 @@ export function LoyaltyLevels() {
   const level = levels[currentLevel]
 
   return (
-    <section className="bg-[#f5f0e8] py-16 px-4">
+    <section id="niveles" className="bg-[#f5f0e8] py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-center text-3xl md:text-4xl text-[#c9a227] font-serif italic mb-12">Explora los niveles</h2>
+        <h2 className="text-center text-3xl md:text-4xl text-[#c9a227] font-serif italic mb-12">
+          {t.loyaltyLevels.title}
+        </h2>
 
         {/* Level Header */}
         <div className="flex items-center justify-between mb-12">
           <button
             onClick={prevLevel}
             className="text-[#c9a227] hover:text-[#a88620] transition-colors p-2"
-            aria-label="Nivel anterior"
+            aria-label={t.loyaltyLevels.previousLevel}
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
@@ -146,7 +147,7 @@ export function LoyaltyLevels() {
           <button
             onClick={nextLevel}
             className="text-[#c9a227] hover:text-[#a88620] transition-colors p-2"
-            aria-label="Siguiente nivel"
+            aria-label={t.loyaltyLevels.nextLevel}
           >
             <ChevronRight className="w-8 h-8" />
           </button>
@@ -157,7 +158,7 @@ export function LoyaltyLevels() {
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left py-4 px-6 font-semibold text-[#333]">Ventajas por nivel</th>
+                <th className="text-left py-4 px-6 font-semibold text-[#333]">{t.loyaltyLevels.benefitsTitle}</th>
                 <th className="text-center py-4 px-6 font-semibold text-[#666] w-24">{level.name}</th>
               </tr>
             </thead>

@@ -1,0 +1,109 @@
+{
+  "navbar": {
+    "offers": "Ofertas",
+    "levels": "Niveles",
+    "signup": "Inscríbete",
+    "login": "Inicio",
+    "register": "Registrarme",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Tu lealtad,",
+    "titleHighlight": "nuestro mayor tesoro.",
+    "subtitle": "Descubre un mundo de beneficios exclusivos"
+  },
+  "bookingBar": {
+    "checkInOut": "Llegada - Salida",
+    "rooms": "Habitaciones",
+    "people": "Personas",
+    "promoCode": "Código Promo",
+    "optional": "Opcional",
+    "reserve": "Reservar",
+    "close": "Cerrar",
+    "whatsappMessage": {
+      "greeting": "Hola, me gustaría reservar:",
+      "dates": "Fechas",
+      "rooms": "Habitaciones",
+      "people": "Personas",
+      "promoCode": "Código promo"
+    }
+  },
+  "rewardsHero": {
+    "title": "Costa de Oro Rewards",
+    "subtitle": "Tu estancia en Mazatlán, aún más gratificante",
+    "description": "Descubre nuestro programa de recompensas y transforma cada visita en puntos canjeables por ofertas exclusivas, descuentos irresistibles y beneficios solo para miembros. Únete y empieza a disfrutar.",
+    "benefits": {
+      "welcomePoints": "200 puntos",
+      "welcomeSubtitle": "de bienvenida",
+      "wifi": "WiFi",
+      "wifiSubtitle": "en cortesía",
+      "rates": "Tarifas",
+      "ratesSubtitle": "Preferenciales*",
+      "nights": "Noches de",
+      "nightsSubtitle": "hospedaje*"
+    }
+  },
+  "loyaltyLevels": {
+    "title": "Explora los niveles",
+    "previousLevel": "Nivel anterior",
+    "nextLevel": "Siguiente nivel",
+    "benefitsTitle": "Ventajas por nivel",
+    "levels": {
+      "gold": {
+        "name": "ORO",
+        "description": "Registrarse en el programa (sin costo). Tu puerta de entrada al mundo de beneficios exclusivos."
+      },
+      "platinum": {
+        "name": "PLATINO",
+        "description": "Haber completado [número] estancias o acumulado [cantidad] puntos en un periodo de [tiempo]."
+      },
+      "diamond": {
+        "name": "DIAMANTE",
+        "description": "Haber completado [número] estancias o acumulado [cantidad] puntos en un periodo de [tiempo]. El nivel más exclusivo."
+      }
+    },
+    "benefits": {
+      "welcomeDiscount": "Descuento de bienvenida en próxima reserva directa",
+      "priorityCheckInOut": "Check in y check out prioritario",
+      "exclusiveOffers": "Acceso a ofertas exclusivas",
+      "freeWifi": "Wi-Fi gratuito",
+      "pointsAccumulation": "Acumulación de puntos por noche",
+      "roomUpgrade": "Mejora de habitación (Upgrade sujeto a disponibilidad)",
+      "additionalDiscount": "Descuento adicional en reservas directas",
+      "welcomeDrink": "Bebida de bienvenida gratuita",
+      "earlyAccessPromos": "Acceso anticipado a promociones",
+      "increasedPoints": "Aumento en cantidad de puntos",
+      "lateCheckout": "Late check out (sujeto a disponibilidad)",
+      "guaranteedUpgrade": "Mejora de habitación garantizada (sin costo)",
+      "significantDiscount": "Descuento significativo (mayor porcentaje)",
+      "freeBreakfast": "Desayuno buffet gratuito para el titular",
+      "maximumPoints": "Máximo beneficio de puntos por noche",
+      "guaranteedCheckInOut": "Early check in y late check out garantizados",
+      "personalizedAttention": "Atención personalizada",
+      "specialWelcomeGift": "Obsequio de bienvenida especial"
+    }
+  },
+  "signupCta": {
+    "title": "¿Aún no eres socio? Inscríbete hoy.",
+    "subtitle": "Tarifas exclusivas, gana puntos para noches gratis y más. Inscríbete hoy gratis.",
+    "signupButton": "Inscríbase ahora",
+    "loginButton": "Iniciar sesión",
+    "imageAlt": "Vista de playa tropical con palmeras y océano"
+  },
+  "footer": {
+    "navigation": {
+      "home": "Inicio",
+      "levels": "Niveles",
+      "offers": "Ofertas",
+      "experiences": "Experiencias"
+    },
+    "copyright": "© 2025. Todos los Derechos Reservados.",
+    "privacyPolicy": "Aviso de Privacidad",
+    "termsConditions": "Términos y Condiciones"
+  },
+  "common": {
+    "bookNow": "Reservar Ahora",
+    "viewRooms": "Ver Habitaciones",
+    "learnMore": "Más Información"
+  }
+}

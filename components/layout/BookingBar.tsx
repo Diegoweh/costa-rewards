@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import { X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WHATSAPP_PHONE = "5216693300014"; // 👈 cámbialo
 
@@ -16,6 +17,7 @@ export default function BookingBar({
   defaultNights = 1,
   onClose,
 }: Props) {
+  const { t } = useLanguage();
   const todayISO = new Date().toISOString().slice(0, 10);
   const [checkIn, setCheckIn] = useState(todayISO);
 
@@ -39,14 +41,14 @@ export default function BookingBar({
 
   const message = useMemo(() => {
     const parts = [
-      "Hola, me gustaría reservar:",
-      `• Fechas: ${fmt(checkIn)} - ${fmt(checkOut)}`,
-      `• Habitaciones: ${rooms}`,
-      `• Personas: ${people}`,
-      promo ? `• Código promo: ${promo}` : "",
+      t.bookingBar.whatsappMessage.greeting,
+      `• ${t.bookingBar.whatsappMessage.dates}: ${fmt(checkIn)} - ${fmt(checkOut)}`,
+      `• ${t.bookingBar.whatsappMessage.rooms}: ${rooms}`,
+      `• ${t.bookingBar.whatsappMessage.people}: ${people}`,
+      promo ? `• ${t.bookingBar.whatsappMessage.promoCode}: ${promo}` : "",
     ].filter(Boolean);
     return parts.join("\n");
-  }, [checkIn, checkOut, rooms, people, promo]);
+  }, [checkIn, checkOut, rooms, people, promo, t]);
 
   const waLink = useMemo(() => {
     const base = `https://wa.me/${WHATSAPP_PHONE}`;
@@ -77,7 +79,7 @@ export default function BookingBar({
           <button
             onClick={onClose}
             className="p-1 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
-            aria-label="Cerrar"
+            aria-label={t.bookingBar.close}
           >
             <X size={18} />
           </button>
@@ -88,7 +90,7 @@ export default function BookingBar({
         {/* Fechas (llegada - salida) */}
         <div className="w-full">
           <label className="block text-sm text-[#023a50]/80 mb-2">
-            Llegada - Salida
+            {t.bookingBar.checkInOut}
           </label>
           <div className="grid grid-cols-2 gap-3">
             <div className="relative">
@@ -116,7 +118,7 @@ export default function BookingBar({
 
         {/* Habitaciones */}
         <div>
-          <label className="block text-sm text-[#023a50]/80 mb-2">Habitaciones</label>
+          <label className="block text-sm text-[#023a50]/80 mb-2">{t.bookingBar.rooms}</label>
           <div className="relative">
             <select
               value={rooms}
@@ -136,7 +138,7 @@ export default function BookingBar({
 
         {/* Personas */}
         <div>
-          <label className="block text-sm text-[#023a50]/80 mb-2">Personas</label>
+          <label className="block text-sm text-[#023a50]/80 mb-2">{t.bookingBar.people}</label>
           <div className="relative">
             <select
               value={people}
@@ -156,13 +158,13 @@ export default function BookingBar({
 
         {/* Código Promo */}
         <div>
-          <label className="block text-sm text-[#023a50]/80 mb-2">Código Promo</label>
+          <label className="block text-sm text-[#023a50]/80 mb-2">{t.bookingBar.promoCode}</label>
           <input
             type="text"
             value={promo}
             onChange={(e) => setPromo(e.target.value)}
-            placeholder="Opcional"
-            className="w-full bg-transparent outline-none border-0 border-b 
+            placeholder={t.bookingBar.optional}
+            className="w-full bg-transparent outline-none border-0 border-b
             border-[#d79200]/60 focus:border-[#d79200] pb-1 text-[#023a50] placeholder-[#023a50]/60"
           />
         </div>
@@ -174,11 +176,11 @@ export default function BookingBar({
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center whitespace-nowrap
-            rounded-md px-5 py-2.5 text-[15px] font-medium bg-[#d79200] 
+            rounded-md px-5 py-2.5 text-[15px] font-medium bg-[#d79200]
             hover:bg-[#ab9055] active:bg-[#a98433] text-white shadow-sm
             focus:outline-none focus:ring-2 focus:ring-[#926f24]"
           >
-            Reservar
+            {t.bookingBar.reserve}
           </a>
         </div>
       </div>

@@ -1,0 +1,109 @@
+{
+  "navbar": {
+    "offers": "Offers",
+    "levels": "Levels",
+    "signup": "Sign Up",
+    "login": "Login",
+    "register": "Register",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Your loyalty,",
+    "titleHighlight": "our greatest treasure.",
+    "subtitle": "Discover a world of exclusive benefits"
+  },
+  "bookingBar": {
+    "checkInOut": "Check-in - Check-out",
+    "rooms": "Rooms",
+    "people": "Guests",
+    "promoCode": "Promo Code",
+    "optional": "Optional",
+    "reserve": "Book Now",
+    "close": "Close",
+    "whatsappMessage": {
+      "greeting": "Hello, I would like to book:",
+      "dates": "Dates",
+      "rooms": "Rooms",
+      "people": "Guests",
+      "promoCode": "Promo code"
+    }
+  },
+  "rewardsHero": {
+    "title": "Costa de Oro Rewards",
+    "subtitle": "Your stay in Mazatlán, even more rewarding",
+    "description": "Discover our rewards program and turn every visit into redeemable points for exclusive offers, irresistible discounts, and members-only benefits. Join and start enjoying.",
+    "benefits": {
+      "welcomePoints": "200 points",
+      "welcomeSubtitle": "welcome bonus",
+      "wifi": "WiFi",
+      "wifiSubtitle": "complimentary",
+      "rates": "Preferential",
+      "ratesSubtitle": "Rates*",
+      "nights": "Free",
+      "nightsSubtitle": "night stays*"
+    }
+  },
+  "loyaltyLevels": {
+    "title": "Explore the levels",
+    "previousLevel": "Previous level",
+    "nextLevel": "Next level",
+    "benefitsTitle": "Benefits by level",
+    "levels": {
+      "gold": {
+        "name": "GOLD",
+        "description": "Register for the program (no cost). Your gateway to a world of exclusive benefits."
+      },
+      "platinum": {
+        "name": "PLATINUM",
+        "description": "Complete [number] stays or accumulate [amount] points within [time period]."
+      },
+      "diamond": {
+        "name": "DIAMOND",
+        "description": "Complete [number] stays or accumulate [amount] points within [time period]. The most exclusive level."
+      }
+    },
+    "benefits": {
+      "welcomeDiscount": "Welcome discount on next direct booking",
+      "priorityCheckInOut": "Priority check-in and check-out",
+      "exclusiveOffers": "Access to exclusive offers",
+      "freeWifi": "Free Wi-Fi",
+      "pointsAccumulation": "Points accumulation per night",
+      "roomUpgrade": "Room upgrade (subject to availability)",
+      "additionalDiscount": "Additional discount on direct bookings",
+      "welcomeDrink": "Complimentary welcome drink",
+      "earlyAccessPromos": "Early access to promotions",
+      "increasedPoints": "Increased points earning",
+      "lateCheckout": "Late check-out (subject to availability)",
+      "guaranteedUpgrade": "Guaranteed room upgrade (no charge)",
+      "significantDiscount": "Significant discount (higher percentage)",
+      "freeBreakfast": "Complimentary buffet breakfast for holder",
+      "maximumPoints": "Maximum points benefit per night",
+      "guaranteedCheckInOut": "Guaranteed early check-in and late check-out",
+      "personalizedAttention": "Personalized attention",
+      "specialWelcomeGift": "Special welcome gift"
+    }
+  },
+  "signupCta": {
+    "title": "Not a member yet? Sign up today.",
+    "subtitle": "Exclusive rates, earn points for free nights and more. Sign up for free today.",
+    "signupButton": "Sign up now",
+    "loginButton": "Log in",
+    "imageAlt": "Tropical beach view with palm trees and ocean"
+  },
+  "footer": {
+    "navigation": {
+      "home": "Home",
+      "levels": "Levels",
+      "offers": "Offers",
+      "experiences": "Experiences"
+    },
+    "copyright": "© 2025. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions"
+  },
+  "common": {
+    "bookNow": "Book Now",
+    "viewRooms": "View Rooms",
+    "learnMore": "Learn More"
+  }
+}

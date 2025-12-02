@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export function SiteFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer>
       {/* Main Footer */}
@@ -36,16 +41,16 @@ export function SiteFooter() {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 justify-end">
             <nav className="flex flex-col items-center md:items-start gap-2 text-[#b5a267]">
               <Link href="#" className="hover:underline">
-                Inicio
+                {t.footer.navigation.home}
               </Link>
               <Link href="#" className="hover:underline">
-                Niveles
+                {t.footer.navigation.levels}
               </Link>
               <Link href="#" className="hover:underline">
-                Ofertas
+                {t.footer.navigation.offers}
               </Link>
               <Link href="#" className="hover:underline">
-                Experiencias
+                {t.footer.navigation.experiences}
               </Link>
             </nav>
 
@@ -65,13 +70,13 @@ export function SiteFooter() {
       {/* Bottom Bar */}
       <div className="bg-[#b5a267] py-3 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 text-white text-sm">
-          <span>© 2025. Todos los Derechos Reservados.</span>
+          <span>{t.footer.copyright}</span>
           <div className="flex gap-4">
             <Link href="#" className="hover:underline">
-              Aviso de Privacidad
+              {t.footer.privacyPolicy}
             </Link>
             <Link href="#" className="hover:underline">
-              Términos y Condiciones
+              {t.footer.termsConditions}
             </Link>
           </div>
         </div>

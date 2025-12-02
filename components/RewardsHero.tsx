@@ -1,31 +1,36 @@
+"use client"
+
 import { Star, Wifi, Umbrella, HandCoins } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export function RewardsHero() {
+  const { t } = useLanguage();
+
   const benefits = [
     {
       icon: Star,
-      title: "200 puntos",
-      subtitle: "de bienvenida",
+      title: t.rewardsHero.benefits.welcomePoints,
+      subtitle: t.rewardsHero.benefits.welcomeSubtitle,
     },
     {
       icon: Wifi,
-      title: "WiFi",
-      subtitle: "en cortesía",
+      title: t.rewardsHero.benefits.wifi,
+      subtitle: t.rewardsHero.benefits.wifiSubtitle,
     },
     {
       icon: Umbrella,
-      title: "Tarifas",
-      subtitle: "Preferenciales*",
+      title: t.rewardsHero.benefits.rates,
+      subtitle: t.rewardsHero.benefits.ratesSubtitle,
     },
     {
       icon: HandCoins,
-      title: "Noches de",
-      subtitle: "hospedaje*",
+      title: t.rewardsHero.benefits.nights,
+      subtitle: t.rewardsHero.benefits.nightsSubtitle,
     },
   ]
 
   return (
-    <section className="relative py-16 px-4 overflow-hidden bg-[#f8f5ed]">
+    <section id="ofertas" className="relative py-16 px-4 overflow-hidden bg-[#f8f5ed]">
       {/* Top decorative gradient with tropical green */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#3d6b4a]/40 to-transparent" />
 
@@ -36,16 +41,15 @@ export function RewardsHero() {
       <div className="relative max-w-4xl mx-auto text-center">
         {/* Main heading */}
         <h1 className="font-serif italic text-3xl md:text-4xl lg:text-5xl text-[#b8860b] mb-1">
-          Costa de Oro Rewards
+          {t.rewardsHero.title}
         </h1>
         <h2 className="font-serif italic text-2xl md:text-3xl lg:text-4xl text-[#b8860b] mb-6">
-          Tu estancia en Mazatlán, aún más gratificante
+          {t.rewardsHero.subtitle}
         </h2>
 
         {/* Description */}
         <p className="text-[#6b6b6b] text-sm md:text-base max-w-2xl mx-auto mb-12 leading-relaxed">
-          Descubre nuestro programa de recompensas y transforma cada visita en puntos canjeables por ofertas exclusivas,
-          descuentos irresistibles y beneficios solo para miembros. Únete y empieza a disfrutar.
+          {t.rewardsHero.description}
         </p>
 
         {/* Benefits grid */}

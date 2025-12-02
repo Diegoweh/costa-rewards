@@ -1,6 +1,11 @@
+"use client"
+
 import BookingBar from "./layout/BookingBar";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function HeroSection() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative h-screen">
       {/* Background Image */}
@@ -16,7 +21,13 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="text-center text-white max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl md:text-7xl font-light mb-6 text-balance font-[family-name:var(--font-royale-serif)]"> Tu lealtad,<span className="text-yellow-400 font-[family-name:var(--font-royale-script)] text-4xl md:text-7xl"> nuestro mayor tesoro.</span> <br />  Descubre  un mundo de beneficios exclusivos
+          <h1 className="text-4xl md:text-7xl font-light mb-6 text-balance font-royale-serif">
+            {t.hero.title}
+            <span className="text-yellow-400 font-royale-script text-4xl md:text-7xl">
+              {" "}{t.hero.titleHighlight}
+            </span>
+            <br />
+            {t.hero.subtitle}
           </h1>
           {/* <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto text-pretty">
             Discover paradise on the shores of Mazatlán with breathtaking views of the Pacific Ocean
