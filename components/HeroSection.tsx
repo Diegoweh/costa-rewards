@@ -23,7 +23,7 @@ export function HeroSection() {
         <div className="text-center text-white max-w-7xl mx-auto px-4">
           <h1 className="text-4xl md:text-7xl font-light mb-6 text-balance font-royale-serif">
             {t.hero.title}
-            <span className="text-yellow-400 font-royale-script text-4xl md:text-7xl">
+            <span className="text-white font-royale-serif italic text-4xl md:text-7xl">
               {" "}{t.hero.titleHighlight}
             </span>
             <br />
@@ -44,9 +44,9 @@ export function HeroSection() {
       </div>
 
       {/* Booking Bar */}
-      <div className="absolute bottom-20 left-0 right-0 z-20 px-4">
+      {/* <div className="absolute bottom-20 left-0 right-0 z-20 px-4">
         <BookingBar />
-      </div>
+      </div> */}
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">

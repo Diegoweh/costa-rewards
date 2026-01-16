@@ -1,6 +1,6 @@
 "use client"
 
-import { Star, Wifi, Umbrella, HandCoins } from "lucide-react"
+import { Hotel, UtensilsCrossed, BadgePercent, Sparkles } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 
 export function RewardsHero() {
@@ -8,22 +8,22 @@ export function RewardsHero() {
 
   const benefits = [
     {
-      icon: Star,
+      icon: Hotel,
       title: t.rewardsHero.benefits.welcomePoints,
       subtitle: t.rewardsHero.benefits.welcomeSubtitle,
     },
     {
-      icon: Wifi,
+      icon: UtensilsCrossed,
       title: t.rewardsHero.benefits.wifi,
       subtitle: t.rewardsHero.benefits.wifiSubtitle,
     },
     {
-      icon: Umbrella,
+      icon: BadgePercent,
       title: t.rewardsHero.benefits.rates,
       subtitle: t.rewardsHero.benefits.ratesSubtitle,
     },
     {
-      icon: HandCoins,
+      icon: Sparkles,
       title: t.rewardsHero.benefits.nights,
       subtitle: t.rewardsHero.benefits.nightsSubtitle,
     },

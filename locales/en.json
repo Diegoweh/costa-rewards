@@ -31,16 +31,16 @@
   "rewardsHero": {
     "title": "Costa de Oro Rewards",
     "subtitle": "Your stay in Mazatlán, even more rewarding",
-    "description": "Discover our rewards program and turn every visit into redeemable points for exclusive offers, irresistible discounts, and members-only benefits. Join and start enjoying.",
+    "description": "Discover our rewards program and turn every visit into points redeemable for nights, discounts, and member-only benefits. Join and start enjoying.",
     "benefits": {
-      "welcomePoints": "200 points",
-      "welcomeSubtitle": "welcome bonus",
-      "wifi": "WiFi",
-      "wifiSubtitle": "complimentary",
-      "rates": "Preferential",
-      "ratesSubtitle": "Rates*",
-      "nights": "Free",
-      "nightsSubtitle": "night stays*"
+      "welcomePoints": "Free",
+      "welcomeSubtitle": "nights",
+      "wifi": "Exchange of",
+      "wifiSubtitle": "food and drinks",
+      "rates": "Discounts on",
+      "ratesSubtitle": "purchases",
+      "nights": "Exclusive",
+      "nightsSubtitle": "experiences"
     }
   },
   "loyaltyLevels": {

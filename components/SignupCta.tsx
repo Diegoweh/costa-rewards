@@ -35,14 +35,14 @@ export function SignupCta() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-3">
+            {/* <div className="flex flex-wrap gap-3">
               <button className="bg-[#023a50] hover:bg-[#27434f] text-white px-6 py-2.5 text-sm font-medium transition-colors rounded-2xl">
                 {t.signupCta.signupButton}
               </button>
               <button className="bg-[#023a50] hover:bg-[#27434f] text-white px-6 py-2.5 text-sm font-medium transition-colors rounded-2xl">
                 {t.signupCta.loginButton}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

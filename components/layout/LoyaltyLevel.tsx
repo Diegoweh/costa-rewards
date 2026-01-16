@@ -109,6 +109,16 @@ export function LoyaltyLevels() {
 
   const level = levels[currentLevel]
 
+  // Colores según el nivel
+  const getLevelColor = () => {
+    switch(currentLevel) {
+      case 0: return 'bg-[#c9a227]' // Oro
+      case 1: return 'bg-[#a8a9ad]' // Platino
+      case 2: return 'bg-[#b9e1ff]' // Diamante
+      default: return 'bg-[#c9a227]'
+    }
+  }
+
   return (
     <section id="niveles" className="bg-[#f5f0e8] py-16 px-4">
       <div className="max-w-4xl mx-auto">
@@ -126,22 +136,10 @@ export function LoyaltyLevels() {
             <ChevronLeft className="w-8 h-8" />
           </button>
 
-          <div className="flex items-center gap-6">
-            {/* Starfish Icon */}
-            <div className="relative">
-              <svg viewBox="0 0 100 100" className="w-24 h-24 text-[#e8a832]">
-                <path
-                  fill="currentColor"
-                  d="M50 0 L58 35 L95 35 L65 55 L75 90 L50 70 L25 90 L35 55 L5 35 L42 35 Z"
-                  transform="rotate(35 50 50)"
-                />
-              </svg>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-[#c9a227] text-white px-4 py-1 text-sm font-bold tracking-widest">{level.name}</div>
-              </div>
-            </div>
-
-            <p className="text-[#666] text-sm max-w-md leading-relaxed">{level.description}</p>
+          <div className="flex-1 text-center">
+            <h3 className={`text-4xl md:text-5xl font-bold tracking-wide text-white ${getLevelColor()} py-4 px-8 rounded-lg inline-block`}>
+              {level.name}
+            </h3>
           </div>
 
           <button
@@ -163,23 +161,25 @@ export function LoyaltyLevels() {
               </tr>
             </thead>
             <tbody>
-              {benefitLabels.map(({ key, label }, index) => {
-                const value = level.benefits[key as keyof typeof level.benefits]
-                return (
-                  <tr key={key} className={index % 2 === 0 ? "bg-gray-50/50" : "bg-white"}>
-                    <td className="py-3 px-6 text-[#333] text-sm">{label}</td>
-                    <td className="py-3 px-6 text-center">
-                      {value === true ? (
-                        <Check className="w-5 h-5 text-[#666] mx-auto" />
-                      ) : value === false ? (
-                        <Minus className="w-5 h-5 text-[#999] mx-auto" />
-                      ) : (
-                        <span className="text-[#666] text-sm">{value}</span>
-                      )}
-                    </td>
-                  </tr>
-                )
-              })}
+              {benefitLabels
+                .filter(({ key }) => level.benefits[key as keyof typeof level.benefits] === true)
+                .map(({ key, label }, index) => {
+                  const value = level.benefits[key as keyof typeof level.benefits]
+                  return (
+                    <tr key={key} className={index % 2 === 0 ? "bg-gray-50/50" : "bg-white"}>
+                      <td className="py-3 px-6 text-[#333] text-sm">{label}</td>
+                      <td className="py-3 px-6 text-center">
+                        {value === true ? (
+                          <Check className="w-5 h-5 text-[#666] mx-auto" />
+                        ) : value === false ? (
+                          <Minus className="w-5 h-5 text-[#999] mx-auto" />
+                        ) : (
+                          <span className="text-[#666] text-sm">{value}</span>
+                        )}
+                      </td>
+                    </tr>
+                  )
+                })}
             </tbody>
           </table>
         </div>
