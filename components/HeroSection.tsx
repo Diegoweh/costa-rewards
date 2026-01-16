@@ -15,7 +15,7 @@ export function HeroSection() {
           alt="Costa de Oro beachfront view"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Content */}
