@@ -11,7 +11,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/img/headerReward.webp"
+          src="/img/headerRewards.webp"
           alt="Costa de Oro beachfront view"
           className="w-full h-full object-cover"
         />
