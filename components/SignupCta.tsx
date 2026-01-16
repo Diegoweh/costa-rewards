@@ -25,14 +25,14 @@ export function SignupCta() {
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="max-w-xl">
             {/* Heading */}
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl italic text-white mb-4 leading-tight">
+            {/* <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl italic text-white mb-4 leading-tight">
               {t.signupCta.title}
-            </h2>
+            </h2> */}
 
             {/* Subtitle */}
-            <p className="text-white/90 text-base md:text-lg mb-6">
+            {/* <p className="text-white/90 text-base md:text-lg mb-6">
               {t.signupCta.subtitle}
-            </p>
+            </p> */}
 
             {/* Buttons */}
             {/* <div className="flex flex-wrap gap-3">

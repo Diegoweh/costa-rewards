@@ -19,15 +19,15 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="relative z-10 flex items-start justify-center h-full pt-32">
         <div className="text-center text-white max-w-7xl mx-auto px-4">
           <h1 className="text-4xl md:text-7xl font-light mb-6 text-balance font-royale-serif">
             {t.hero.title}
-            <span className="text-white font-royale-serif italic text-4xl md:text-7xl">
+            <span className="text-white font-royale-serif italic top-7 text-4xl md:text-7xl">
               {" "}{t.hero.titleHighlight}
             </span>
             <br />
-            {t.hero.subtitle}
+            {/* {t.hero.subtitle} */}
           </h1>
           {/* <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto text-pretty">
             Discover paradise on the shores of Mazatlán with breathtaking views of the Pacific Ocean

@@ -38,9 +38,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overscroll-none">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${royaleScript.variable} ${royaleSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${royaleScript.variable} ${royaleSerif.variable} antialiased overscroll-none`}
       >
         <LanguageProvider>
           <Navbar />
