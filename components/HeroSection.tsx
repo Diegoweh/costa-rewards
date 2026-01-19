@@ -19,7 +19,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-start justify-center h-full pt-54 md:pt-32">
+      <div className="relative z-10 flex items-start justify-center h-full pt-25 md:pt-32">
         <div className="text-center text-white max-w-7xl mx-auto px-4">
           <h1 className="text-4xl md:text-7xl font-light mb-6 text-balance font-royale-serif">
             {t.hero.title}
