@@ -43,15 +43,15 @@ export function SiteFooter() {
               <Link href="#" className="hover:underline">
                 {t.footer.navigation.home}
               </Link>
-              <Link href="#" className="hover:underline">
+              <Link href="#niveles" className="hover:underline">
                 {t.footer.navigation.levels}
               </Link>
-              <Link href="#" className="hover:underline">
+              <Link href="#ofertas" className="hover:underline">
                 {t.footer.navigation.offers}
               </Link>
-              <Link href="#" className="hover:underline">
+              {/* <Link href="#" className="hover:underline">
                 {t.footer.navigation.experiences}
-              </Link>
+              </Link> */}
             </nav>
 
             {/* Social Icons */}
